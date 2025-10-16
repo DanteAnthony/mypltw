@@ -7,8 +7,10 @@ turtles = []
 
 # different turtle lists
 turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
-turtle_colors = ["red", "blue", "green", "orange", "purple", "gold", 
-                 "darkred", "darkblue", "lime", "salmon", "indigo", "brown"]
+turtle_colors = ["red", "green", "blue", "yellow", "orange", "purple", "black", "gray",
+                 "pink", "brown", "cyan", "magenta", "lime", "maroon", "navy", 
+                 "olive", "teal", "violet", "indigo", "gold", "silver", "coral", "crimson",
+                 "orchid", "salmon", "sienna", "tan", "turquoise", "wheat"]
 turtle_drawshape = ["circle", "triangle", "square", "star", "hexagon"]
 
 # square func
