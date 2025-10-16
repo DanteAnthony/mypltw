@@ -75,5 +75,5 @@ for t in turtles:
     elif draw_shape == "hexagon":
         draw_hexagon(random.randint(20, 101), random.choice(turtle_colors))
 
-wn = trtl.Screen()
+wn = turtle.Screen()
 wn.mainloop()
