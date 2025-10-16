@@ -1,4 +1,4 @@
-import turtle as trtl
+import turtle
 import random
 import itertools
 
@@ -50,9 +50,9 @@ counter = 0
 # set turtle shape
 for s in itertools.cycle(turtle_shapes):
     if counter < num:
-        t = trtl.Turtle(shape=random.choice(turtle_shapes))
+        t = turtle.Turtle(shape=random.choice(turtle_shapes))
         t.speed(0)
-        t.pensize(random.randint(5, 20))
+        t.pensize(random.randint(5, 21))
         t.penup()
         t.goto(random.randint(-300, 301), random.randint(-300, 301))
         t.pendown()
