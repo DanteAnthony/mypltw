@@ -57,7 +57,6 @@ for s in itertools.cycle(turtle_shapes):
         t.goto(random.randint(-300, 301), random.randint(-300, 301))
         t.pendown()
         turtles.append(t)
-
         counter = counter + 1
     elif counter >= num:
         break
@@ -65,7 +64,6 @@ for s in itertools.cycle(turtle_shapes):
 # set turtle drawing shape
 for t in turtles:
     draw_shape = random.choice(turtle_drawshape)
-
     if draw_shape == "circle":
         draw_circle(random.randint(20, 101), random.choice(turtle_colors))
     elif draw_shape == "triangle":
