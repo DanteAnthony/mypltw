@@ -52,7 +52,7 @@ counter = 0
 # set turtle shape
 for s in itertools.cycle(turtle_shapes):
     if counter < num:
-        t = turtle.Turtle(shape=random.choice(turtle_shapes))
+        t = turtle.Turtle(shape=s)
         t.speed(0)
         t.pensize(random.randint(5, 21))
         t.penup()
