@@ -87,20 +87,20 @@ def change_size():
    spot.shapesize(random.choice(sizes))
 
 def manage_leaderboard():
-  global score
-  global spot
+   global score
+   global spot
 
-  # get the names and scores from the leaderboard file
-  leader_names_list = leaderboard.get_names(leaderboard_file_name)
-  leader_scores_list = leaderboard.get_scores(leaderboard_file_name)
+   # get the names and scores from the leaderboard file
+   leader_names_list = leaderboard.get_names(leaderboard_file_name)
+   leader_scores_list = leaderboard.get_scores(leaderboard_file_name)
 
-  # show the leaderboard with or without the current player
-  if (len(leader_scores_list) < 5 or score >= leader_scores_list[4]):
-    leaderboard.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
-    leaderboard.draw_leaderboard(True, leader_names_list, leader_scores_list, spot, score)
+   # show the leaderboard with or without the current player
+   if (len(leader_scores_list) < 5 or score >= leader_scores_list[4]):
+      leaderboard.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
+      leaderboard.draw_leaderboard(True, leader_names_list, leader_scores_list, spot, score)
 
-  else:
-    leaderboard.draw_leaderboard(False, leader_names_list, leader_scores_list, spot, score)
+   else:
+      leaderboard.draw_leaderboard(False, leader_names_list, leader_scores_list, spot, score)
 
 #-----events----------------
 spot.onclick(spot_clicked)
