@@ -7,8 +7,6 @@ gold_score = 25
 def get_names(file_name):
   leaderboard_file = open(file_name, "r")  # be sure you have created this
 
-  # use a for loop to iterate through the content of the file, one line at a time
-  # note that each line in the file has the format "leader_name,leader_score" for example "Pat,50"
   names = []
   for line in leaderboard_file:
     leader_name = ""
@@ -20,9 +18,9 @@ def get_names(file_name):
     names.append(leader_name)
 
   print(names)
+
   leaderboard_file.close()
 
-  #  TODO 6: return the names list in place of the empty list
   return names
 
 
@@ -44,11 +42,11 @@ def get_scores(file_name):
       index = index + 1
         
     scores.append(int(leader_score))
+
   print(scores)
    
   leaderboard_file.close()
 
-  # TODO 7: return the scores in place of the empty list
   return scores
 
 
@@ -58,30 +56,26 @@ def update_leaderboard(file_name, leader_names, leader_scores,  player_name, pla
   index = 0
   
   for index in range(len(leader_scores)):
-    pass
-  
-    if ():
+
+    if (player_score >= leader_scores[index]):
       break
     else:
       index = index + 1
-  
-  
-  # TODO 10: insert new player and score
 
-  # TODO 11: keep both lists at 5 elements only (top 5 players)
-  
-  # TODO 12: store the latest leaderboard back in the file
-  
-  '''
+  leader_scores.insert(index, player_score)
+  leader_names.insert(index, player_name)
+
+  if (len(leader_scores) > 5):
+    leader_names.pop()
+    leader_scores.pop()
+
   leaderboard_file = open(file_name, "w")  # this mode opens the file and erases its contents for a fresh start
  
-  # TODO 13 loop through all the leaderboard elements and write them to the the file
-  for   :
+  for index in range(len(leader_names)):
     leaderboard_file.write(leader_names[index] + "," + str(leader_scores[index]) + "\n")
 
   leaderboard_file.close()
-   '''
-  
+
 
 # draw leaderboard and display a message to player
 def draw_leaderboard(high_scorer, leader_names, leader_scores, turtle_object, player_score):
