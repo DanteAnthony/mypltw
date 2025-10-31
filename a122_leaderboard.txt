@@ -1,5 +1,5 @@
-Dan,32
-AAA,31
-Pat,5
-Sam,4
-Han,3
+Pat,10
+Sam,8
+Han,6
+Josh,4
+Max,2
